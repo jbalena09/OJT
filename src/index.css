@@ -177,17 +177,20 @@ body {
   }
 
   .Header .drop-down-hidden {
-    display: none;
+    opacity: 0;
+    height: 0 !important;
+    width: 0;
   }
 
   .Header .drop-down {
-    position: absolute;
+    position: fixed;
     top: 64px;
     right: 0;
     left: 0;
     text-align: center;
     background-color: rgba(24, 24, 24, 0.8);
     border-top: 1px solid rgba(24, 24, 24, 1);
+    transition: all 0.5s ease-in-out;
   }
 
   .Header span {
