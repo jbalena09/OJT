@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./index.css";
 import image from "./logo.svg";
 import nav from "./images/nav.png";
+import { MenuItems } from "./MenuItems.js";
 
 function Header() {
   const [navbar, setNav] = useState(false);
@@ -38,22 +39,15 @@ function Header() {
       </div>
       <div className={dropDown ? "drop-down-hidden" : "drop-down"}>
         <ul>
-          <li>
-            <a href="#" className="list">
-              Movies
-            </a>
-          </li>
-          <li>
-            <a href="#" className="list">
-              Tv Show
-            </a>
-          </li>
-          <li>
-            {" "}
-            <a href="#" className="list">
-              More
-            </a>
-          </li>
+          {MenuItems.map((item, index) => {
+            return (
+              <li key={index}>
+                <a className={item.cName} href={item.url}>
+                  {item.title}
+                </a>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </div>
