@@ -55,18 +55,16 @@ body {
   display: none;
 }
 
-.App .Images {
-  margin: 6% auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 100px;
+.App .Home {
+  margin: 350px 0;
 }
 
-.App img {
-  width: 70%;
-  height: auto;
-  border-radius: 1%;
+.App h2 {
+  color: black;
+}
+
+.App h2 a {
+  color: red;
 }
 
 .Footer {
@@ -126,6 +124,110 @@ body {
   color: #7f8381;
 }
 
+/* Movies css style here */
+
+.Movies .Images {
+  margin: 6% auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 100px;
+}
+
+.Movies .Images a {
+  display: inline-block;
+}
+
+.Movies .Images div {
+  display: inline-block;
+}
+
+.Movies .Images img {
+  width: 370px;
+  height: auto;
+  border-radius: 1%;
+  display: inline-block;
+}
+
+.Movies .Images h1 {
+  color: black;
+}
+
+/* TV-show-page css style here */
+.Show {
+  margin: 350px 0;
+}
+
+.Show h1 {
+  color: black;
+}
+
+/* More-page css style here */
+
+.More {
+  margin: 350px 0;
+}
+
+.More h1 {
+  color: black;
+}
+
+/* Invalid Address */
+.invalid {
+  margin: 350px 0;
+}
+
+/* Movie-page valid-slug */
+.Movie .validMovie {
+  margin: 6% auto;
+  padding: 0 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.Movie .validMovie div img {
+  width: 300px;
+  height: 450px;
+  border-radius: 25px;
+}
+
+.Movie .validMovie section {
+  width: 70%;
+  height: 450px;
+  background: rgba(62, 191, 200, 0.15);
+  border-radius: 25px;
+  text-align: left;
+}
+
+.Movie .validMovie h1 {
+  margin-left: 150px;
+  font-size: 30px;
+  color: black;
+}
+
+.Movie .validMovie h2 {
+  margin-left: 50px;
+  font-size: 30px;
+  color: black;
+}
+
+.Movie .validMovie h3 {
+  margin: 0 75px;
+  font-size: 17px;
+  color: black;
+  margin-bottom: 25px;
+}
+
+/* Movie-page invalid-slugs */
+.Movie .invalidMovie {
+  margin: 350px 0;
+}
+
+.Movie .invalidMovie h1 {
+  color: black;
+}
+
 @media only screen and (max-width: 1250px) {
   .Header {
     justify-content: space-between;
@@ -141,6 +243,22 @@ body {
   .App img {
     margin-top: 50px;
     width: 323px;
+  }
+  .Movie .validMovie {
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .Movie .validMovie section {
+    height: 100%;
+    margin: 25px 0;
+  }
+
+  .Movie .validMovie section h1 {
+    margin: 0;
+    text-align: center;
   }
 
   .Footer {
@@ -201,6 +319,23 @@ body {
     width: 70%;
     height: auto;
     border-radius: 1%;
+  }
+
+  .Movie .validMovie section h1 {
+    font-size: 25px;
+  }
+
+  .Movie .validMovie h2 {
+    margin-left: 50px;
+    font-size: 20px;
+    color: black;
+  }
+
+  .Movie .validMovie h3 {
+    margin: 0 75px;
+    font-size: 12px;
+    color: black;
+    margin-bottom: 25px;
   }
 
   .Footer {

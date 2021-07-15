@@ -9,16 +9,16 @@ import reactDom from "react-dom";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Header />
   </React.StrictMode>,
-  document.getElementById("app")
+  document.getElementById("header")
 );
 
 ReactDOM.render(
   <React.StrictMode>
-    <Header />
+    <App />
   </React.StrictMode>,
-  document.getElementById("header")
+  document.getElementById("app")
 );
 
 reactDom.render(

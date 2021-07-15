@@ -8,14 +8,14 @@ function Header() {
   const [navbar, setNav] = useState(false);
   const [dropDown, setDropDown] = useState(true);
 
-  const backgroundChanger = () => {
+  const dropDownMenu = () => {
     if (window.scrollY >= 30) {
       setNav(true);
     } else {
       setNav(false);
     }
   };
-  window.addEventListener("scroll", backgroundChanger);
+  window.addEventListener("scroll", dropDownMenu);
 
   let flag = true;
   const navClick = () => {
@@ -30,7 +30,7 @@ function Header() {
   return (
     <div className={navbar ? "Header fixed" : "Header"}>
       <div className="non-drop-down">
-        <a href="#">
+        <a href="/">
           <img src={image} width="154px" height="24" />
         </a>
         <span>
@@ -42,7 +42,7 @@ function Header() {
           {MenuItems.map((item, index) => {
             return (
               <li key={index}>
-                <a className={item.cName} href={item.url}>
+                <a href={item.url} className={item.cName}>
                   {item.title}
                 </a>
               </li>

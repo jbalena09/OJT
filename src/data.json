@@ -1,0 +1,23 @@
+[
+  {
+    "name": "IO",
+    "url": "/images/poster1.jpg",
+    "slug": "io",
+    "description": "As a young scientist searches for a way to save a dying Earth, she finds a connection with a man who's racing to catch the last shuttle off the planet.",
+    "rating": 49
+  },
+  {
+    "name": "The Green Knight",
+    "url": "/images/poster2.jpg",
+    "slug": "the-green-knight",
+    "description": "An epic fantasy adventure based on the timeless Arthurian legend, The Green Knight tells the story of Sir Gawain, King Arthur's reckless and headstrong nephew, who embarks on a daring quest to confront the eponymous Green Knight, a gigantic emerald-skinned stranger and tester of men.",
+    "rating": 89
+  },
+  {
+    "name": "The Dry",
+    "url": "/images/poster3.jpg",
+    "slug": "the-dry",
+    "description": "Aaron Falk returns to his drought-stricken hometown to attend a tragic funeral. But his return opens a decades-old wound - the unsolved death of a teenage girl.",
+    "rating": 71
+  }
+]
