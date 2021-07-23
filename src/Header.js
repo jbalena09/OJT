@@ -9,20 +9,12 @@ function Header() {
   const [dropDown, setDropDown] = useState(true);
 
   const dropDownMenu = () => {
-    if (window.scrollY >= 30) {
-      setNav(true);
-    } else {
-      setNav(false);
-    }
+    window.scrollY >= 30 ? setNav(true) : setNav(false);
   };
   window.addEventListener("scroll", dropDownMenu);
 
   const navClick = () => {
-    if (dropDown) {
-      setDropDown(false);
-    } else {
-      setDropDown(true);
-    }
+    dropDown ? setDropDown(false) : setDropDown(true);
   };
 
   return (
