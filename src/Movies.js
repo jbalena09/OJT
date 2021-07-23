@@ -1,4 +1,3 @@
-import React, { Component } from "react";
 import data from "./data.json";
 import { Link } from "react-router-dom";
 

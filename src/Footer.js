@@ -5,21 +5,21 @@ function Footer() {
   return (
     <div className="Footer">
       <div className="social">
-        <a href="#">
-          <img src={logo} height="75px" width="120px" />
+        <a href="https://www.themoviedb.org/">
+          <img src={logo} height="75px" width="120px" alt="logo" />
         </a>
         <ul>
           <li>
-            <a href="#">f</a>
+            <a href="https://www.themoviedb.org/">f</a>
           </li>
           <li>
-            <a href="#">t</a>
+            <a href="https://www.themoviedb.org/">t</a>
           </li>
           <li>
-            <a href="#">i</a>
+            <a href="https://www.themoviedb.org/">i</a>
           </li>
           <li>
-            <a href="#">l</a>
+            <a href="https://www.themoviedb.org/">l</a>
           </li>
         </ul>
       </div>
@@ -27,16 +27,16 @@ function Footer() {
         <h3>Support</h3>
         <ul>
           <li>
-            <a href="#">Contact Us</a>
+            <a href="https://www.themoviedb.org/">Contact Us</a>
           </li>
           <li>
-            <a href="#">FAQ</a>
+            <a href="https://www.themoviedb.org/">FAQ</a>
           </li>
           <li>
-            <a href="#">Downloads</a>
+            <a href="https://www.themoviedb.org/#">Downloads</a>
           </li>
           <li>
-            <a href="#">Register</a>
+            <a href="https://www.themoviedb.org/">Register</a>
           </li>
         </ul>
       </div>
@@ -44,16 +44,16 @@ function Footer() {
         <h3>TMDb </h3>
         <ul>
           <li>
-            <a href="#">About TMDb</a>
+            <a href="https://www.themoviedb.org/">About TMDb</a>
           </li>
           <li>
-            <a href="#">Support Forums</a>
+            <a href="https://www.themoviedb.org/">Support Forums</a>
           </li>
           <li>
-            <a href="#">API</a>
+            <a href="https://www.themoviedb.org/">API</a>
           </li>
           <li>
-            <a href="#">System Status</a>
+            <a href="https://www.themoviedb.org/">System Status</a>
           </li>
         </ul>
       </div>

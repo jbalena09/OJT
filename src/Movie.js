@@ -1,4 +1,3 @@
-import React, { Component } from "react";
 import data from "./data.json";
 import "./index.css";
 import "./circle.css";
@@ -16,7 +15,7 @@ function Movie({ match }) {
     <div className="Movie">
       <div className="validMovie">
         <div>
-          <img src={movie.url} />
+          <img src={movie.url} alt="img" />
         </div>
         <section>
           <h2>Title: </h2>

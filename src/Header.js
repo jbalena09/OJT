@@ -17,13 +17,11 @@ function Header() {
   };
   window.addEventListener("scroll", dropDownMenu);
 
-  let flag = true;
   const navClick = () => {
     if (dropDown) {
       setDropDown(false);
     } else {
       setDropDown(true);
-      flag = true;
     }
   };
 
@@ -31,10 +29,10 @@ function Header() {
     <div className={navbar ? "Header fixed" : "Header"}>
       <div className="non-drop-down">
         <a href="/">
-          <img src={image} width="154px" height="24" />
+          <img src={image} width="154px" height="24" alt="img" />
         </a>
         <span>
-          <img src={nav} width="20px" onClick={() => navClick()} />
+          <img src={nav} width="20px" onClick={() => navClick()} alt="img" />
         </span>
       </div>
       <div className={dropDown ? "drop-down-hidden" : "drop-down"}>
