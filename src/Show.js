@@ -9,8 +9,6 @@ function Show({ match }) {
   }, []);
 
   const [searchData, setSearch] = useState([]);
-
-  // console.log(match);
   const id = searchData.id;
 
   const search = async () => {
@@ -18,13 +16,11 @@ function Show({ match }) {
       `${api.search}${match.params.title}?api_key=${api.key}`
     );
     const searchData = await data.json();
-    console.log(searchData);
     setSearch(searchData);
   };
 
   let flag = true;
   id == match.params.title ? (flag = true) : (flag = false);
-  console.log(flag);
   return flag ? (
     <div className="Show">
       <div className="validMovie">
