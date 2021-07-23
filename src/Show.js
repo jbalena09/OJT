@@ -1,104 +1,59 @@
+import "./index.css";
+import "./circle.css";
 import React, { useState, useEffect } from "react";
-import api from "./movies_api.ts";
-function Show() {
+import api from "./movies_api";
+
+function Show({ match }) {
   useEffect(() => {
-    topPopular();
-    topRated();
-    Upcoming();
+    search();
   }, []);
 
-  const [popular, setPopular] = useState([]);
-  const [rated, setRated] = useState([]);
-  const [upcoming, setUpcoming] = useState([]);
+  const [searchData, setSearch] = useState([]);
 
-  const topPopular = async () => {
-    const data = await fetch(api.topPopular);
-    const popular = await data.json();
-    setPopular(popular.results);
+  // console.log(match);
+  const id = searchData.id;
+
+  const search = async () => {
+    const data = await fetch(
+      `${api.search}${match.params.title}?api_key=${api.key}`
+    );
+    const searchData = await data.json();
+    console.log(searchData);
+    setSearch(searchData);
   };
 
-  const topRated = async () => {
-    const data = await fetch(api.topRated);
-    const rated = await data.json();
-    setRated(rated.results);
-  };
-
-  const Upcoming = async () => {
-    const data = await fetch(api.newMovies);
-    const upcoming = await data.json();
-    setUpcoming(upcoming.results);
-  };
-
-  return (
+  let flag = true;
+  id == match.params.title ? (flag = true) : (flag = false);
+  console.log(flag);
+  return flag ? (
     <div className="Show">
-      <div className="row">
-        <h1>Top 10 Popular Movies</h1>
-        <div className="movies">
-          {popular.slice(0, 5).map((movie) => {
-            return (
-              <a href={api.url + movie.id} target="_blank" rel="noreferrer">
-                <img src={api.imgUrl + movie.poster_path} alt={movie.id} />
-                <h3>{movie.title}</h3>
-              </a>
-            );
-          })}
+      <div className="validMovie">
+        <div>
+          <img src={api.imgUrl + searchData.poster_path} alt="img" />
         </div>
-        <div className="movies">
-          {popular.slice(5, 10).map((movie) => {
-            return (
-              <a href={api.url + movie.id} target="_blank" rel="noreferrer">
-                <img src={api.imgUrl + movie.poster_path} alt={movie.id} />
-                <h3>{movie.title}</h3>
-              </a>
-            );
-          })}
-        </div>
+        <section>
+          <h2>Title: </h2>
+          <h1>{searchData.title}</h1>
+          <h2>Rating: </h2>
+          <div
+            class={`c100 p${searchData.vote_average * 10} center small orange`}
+          >
+            <span>{searchData.vote_average * 10}%</span>
+            <div class="slice">
+              <div class="bar"></div>
+              <div class="fill"></div>
+            </div>
+          </div>
+          <h2>Description:</h2>
+          <h3>{searchData.overview}</h3>
+        </section>
       </div>
-      <div className="row">
-        <h1>Top 10 Top-Rated Movies</h1>
-        <div className="movies">
-          {rated.slice(0, 5).map((movie) => {
-            return (
-              <a href={api.url + movie.id} target="_blank" rel="noreferrer">
-                <img src={api.imgUrl + movie.poster_path} alt={movie.id} />
-                <h3>{movie.title}</h3>
-              </a>
-            );
-          })}
-        </div>
-        <div className="movies">
-          {rated.slice(5, 10).map((movie) => {
-            return (
-              <a href={api.url + movie.id} target="_blank" rel="noreferrer">
-                <img src={api.imgUrl + movie.poster_path} alt={movie.id} />
-                <h3>{movie.title}</h3>
-              </a>
-            );
-          })}
-        </div>
-      </div>
-      <div className="row">
-        <h1>Top 10 Upcoming Movies</h1>
-        <div className="movies">
-          {upcoming.slice(0, 5).map((movie) => {
-            return (
-              <a href={api.url + movie.id} target="_blank" rel="noreferrer">
-                <img src={api.imgUrl + movie.poster_path} alt={movie.id} />
-                <h3>{movie.title}</h3>
-              </a>
-            );
-          })}
-        </div>
-        <div className="movies">
-          {upcoming.slice(5, 10).map((movie) => {
-            return (
-              <a href={api.url + movie.id} target="_blank" rel="noreferrer">
-                <img src={api.imgUrl + movie.poster_path} alt={movie.id} />
-                <h3>{movie.title}</h3>
-              </a>
-            );
-          })}
-        </div>
+    </div>
+  ) : (
+    <div className="Movie">
+      <div className="invalidMovie">
+        <h1>Invalid Movie Title.. </h1>
+        <h1>Movie doesn't exist!</h1>
       </div>
     </div>
   );

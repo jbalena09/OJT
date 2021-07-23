@@ -1,6 +1,7 @@
 import "./App.css";
 import "./index.css";
 import Movies from "./Movies";
+import Shows from "./Shows";
 import Show from "./Show";
 import More from "./More";
 import Movie from "./Movie";
@@ -14,7 +15,8 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route path="/Movies" exact component={Movies} />
           <Route path="/Movies/:title" component={Movie} />
-          <Route path="/Tv-Show" component={Show} />
+          <Route path="/Show" exact component={Shows} />
+          <Route path="/Show/:title" component={Show} />
           <Route path="/More" component={More} />
           <Route path="*" component={Invalid} />
         </Switch>

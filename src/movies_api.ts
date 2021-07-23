@@ -8,6 +8,7 @@ const api = {
     "https://api.themoviedb.org/3/movie/top_rated?api_key=aa08d6c30dbc0f64983cfec52a0e8d7e&language=en-US&page=1",
   newMovies:
     "https://api.themoviedb.org/3/movie/upcoming?api_key=aa08d6c30dbc0f64983cfec52a0e8d7e&language=en-US&page=1",
+  search: "https://api.themoviedb.org/3/movie/",
 };
 
 export default api;
